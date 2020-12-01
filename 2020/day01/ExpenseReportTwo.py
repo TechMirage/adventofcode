@@ -54,7 +54,6 @@ class ExpenseReport():
     def __call__(self):
         counter_one = 0
         while counter_one <= self.max_rotations:
-            self.cur_rotated_report_2 = deepcopy(self.report)
             counter_two = 0
             while counter_two <= self.max_rotations:
                 output = self.add()
