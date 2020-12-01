@@ -8,10 +8,14 @@ class ExpenseReport():
         ----------
         report : list(int)
             The original report stored on the class.
+        max_rotations : int
+            The maximum number of rotations before you end back to where you
+            started.
         cur_rotated_report : list(int)
             The current rotation of the report. 
         num_of_rotations : int
             The number of rotations that the report currently has had.
+
         """
         self.report = self.format_string(input)
         self.max_rotations = len(self.report)
