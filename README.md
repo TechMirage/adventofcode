@@ -8,3 +8,7 @@ Over the course of the next few months, I hope to use this repo to consolidate a
 I'm not sure how I will go about documenting necessarily, but here's hoping we figure something out as the repo grows!
 
 [Advent of Code](http://adventofcode.com) is the website to check out the original puzzles!
+
+### Installation
+
+2020 is the only year that uses something non-standard yet. It uses a library called "advent-of-code-data" to pull data directly from the site so that you don't have to create an input.txt, like the previous years so far. There is a requirements.txt that can be pip installed or you can pip install the library directly. It requires that you have your session ID saved as an environment variable called "SESSION_ID", which you can retrieve from the input page header information on their site.
