@@ -1,21 +1,22 @@
 import time
+from aocd import get_data
 
 def process(line: str):
     return ""
 
 
 def main():
+    puzzle_input = get_data(day=1)
+    print("The puzzle input is ", puzzle_input)
+
     start_time = time.time()
 
-    with open('input.txt') as f:
-        for line in f:
-            output = process(line)
+    output = process(puzzle_input)
 
     stop_time = time.time()
     
     print("The answer is ", output)
     print("And it took about ", stop_time - start_time, " seconds to do it.")
-
 
 
 if __name__ == "__main__":
