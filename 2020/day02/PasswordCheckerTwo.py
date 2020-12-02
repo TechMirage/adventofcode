@@ -1,7 +1,7 @@
 import re
 
 class PasswordChecker():
-    RE_MATCH = r"(\d*)-(\d*) (.): ([a-z]*)"
+    RE_MATCH = r"(\d+)-(\d+) ([a-z]): ([a-z]+)"
     def __init__(self):
         self.valid_passwords = 0
 
@@ -28,7 +28,5 @@ class PasswordChecker():
             first = True
         if phrase[x2 - 1] == target:
             second = True
-        if first != second:
-            return True
-        return False
+        return first != second
 
