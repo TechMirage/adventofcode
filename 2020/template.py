@@ -7,7 +7,6 @@ def process(line: str):
 
 def main():
     puzzle_input = get_data(day=1)
-    print("The puzzle input is ", puzzle_input)
 
     start_time = time.time()
 
