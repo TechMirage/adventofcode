@@ -5,3 +5,5 @@ The tropical island has its own currency and is entirely cash-only. The gold coi
 To save your vacation, you need to get all fifty stars by December 25th.
 
 Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
+
+NOTE: The seconds that are in the READMEs going forward are just the runtime on my machine. Was just curious about cpu efficiency, for some reason.
