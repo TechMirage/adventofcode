@@ -1,7 +1,6 @@
 import time
 from aocd import get_data
 import networkx as nx
-from functools import reduce
 
 OUR_BAG = "shiny gold"
 
