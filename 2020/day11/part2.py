@@ -49,96 +49,20 @@ class FerrySeats():
         
     def get_visible(self, x, y):
         adjacents = []
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            try:
-                if (w:=self.seats[x + a][y]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            if x - a < 0:
-                break
-            try:
-                if (w:=self.seats[x - a][y]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            try:
-                if (w:=self.seats[x][y + a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            if y - a < 0:
-                break
-            try:
-                if (w:=self.seats[x][y - a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            try:
-                if (w:=self.seats[x + a][y + a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            if y - a < 0:
-                break
-            try:
-                if (w:=self.seats[x + a][y - a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            if x - a < 0:
-                break
-            try:
-                if (w:=self.seats[x - a][y + a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
-        found = False
-        for a in range(1, len(self.seats)):
-            if found:
-                break
-            if x - a < 0 or y - a < 0:
-                break
-            try:
-                if (w:=self.seats[x - a][y - a]) != ".":
-                    adjacents.append(w)
-                    found = True
-            except IndexError:
-                break
+        for f, g in zip([0, 0, 1, -1, 1, -1, 1, -1], 
+                        [1, -1, 0, 0, -1, 1, 1, -1]):
+            found = False
+            for a in range(1, len(self.seats)):
+                if found:
+                    break
+                if (x + f * a) < 0 or (y + g * a) < 0:
+                    break
+                try:
+                    if (w:=self.seats[x + f * a][y + g * a]) != ".":
+                        adjacents.append(w)
+                        found = True
+                except IndexError:
+                    break
 
         return adjacents
 
