@@ -1,7 +1,7 @@
 import time
 from aocd import get_data
 
-def process(line: str):
+def process(puzzle_input: str):
     return ""
 
 
